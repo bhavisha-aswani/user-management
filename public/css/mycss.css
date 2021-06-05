@@ -1,0 +1,18 @@
+.modal-header{
+  background-color: #17a2b8; 
+  color:white !important; 
+  text-align: center; 
+  font-size: 30px;
+}
+.table thead th{
+  background-color: #99CCFF;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
