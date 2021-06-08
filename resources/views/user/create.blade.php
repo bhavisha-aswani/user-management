@@ -16,16 +16,31 @@
             <div class="form-group">
               <label>Email:</label>
               <input type="email" class="form-control" name="email" placeholder="Enter Email" value="{{ old('email') }}" required>
+              @if ($errors->has('email'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+              @endif
             </div>
 
             <div class="form-group">
               <label>Full name:</label>
               <input type="text" class="form-control" name="name" placeholder="Enter Full name" value="{{ old('name') }}" required>
+              @if ($errors->has('name'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('name') }}</strong>
+                                    </span>
+              @endif
             </div>
 
             <div class="form-group">
               <label>Date of Joining:</label>
               <input type="date" class="form-control" name="joining_date" value="{{ old('joining_date') }}" required>
+              @if ($errors->has('joining_date'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('joining_date') }}</strong>
+                                    </span>
+              @endif
             </div>
 
             <div class="form-group">

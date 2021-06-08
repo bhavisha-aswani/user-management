@@ -39,9 +39,12 @@ class EmployeeController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'image' => 'mimes:jpg,png,jpeg,gif',
-        ]);
+        $this->validate($request,[
+            'name' => 'required',
+            'email' => 'required',
+            'joining_date' => 'required',
+            'image' => 'required|mimes:jpg,png,jpeg,gif',
+            ]);
         //status "on" & 1 for current working employee
         //status "off" & 0 for ex-employee
         
